@@ -15,6 +15,8 @@ public class MainHibernate {
         var user3 = new User("Тре", "тий", (byte) 59);
         var user4 = new User("Четвер", "тый", (byte) 74);
 
+        userDao.createUsersTable();
+
         userDao.saveUser(user1);
         userDao.saveUser(user2);
         userDao.saveUser(user3);

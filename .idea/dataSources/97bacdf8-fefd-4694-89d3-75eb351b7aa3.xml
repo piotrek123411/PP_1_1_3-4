@@ -1136,7 +1136,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="307" parent="300" name="id">
-      <AutoIncrement>13</AutoIncrement>
+      <AutoIncrement>17</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1168,41 +1168,32 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="314" parent="301" name="id">
-      <AutoIncrement>60</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="315" parent="301" name="name">
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="316" parent="301" name="last_name">
-      <DataType>varchar(255)|0s</DataType>
+    <column id="316" parent="301" name="lastName">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="317" parent="301" name="age">
-      <DataType>int|0s</DataType>
+      <DataType>tinyint|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="318" parent="301" name="email">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="319" parent="301" name="lastname">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="320" parent="301" name="car_id">
-      <DataType>bigint|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <index id="321" parent="301" name="PRIMARY">
+    <index id="318" parent="301" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="322" parent="301" name="PRIMARY">
+    <key id="319" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
