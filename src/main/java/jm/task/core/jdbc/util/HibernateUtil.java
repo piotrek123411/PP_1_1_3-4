@@ -11,6 +11,16 @@ import java.util.Properties;
 
 public class HibernateUtil {
     private static SessionFactory sessionFactory = null;
+    private static HibernateUtil instance = null;
+
+    public static HibernateUtil getInstance() {
+        if (null == instance) {
+            instance = new HibernateUtil();
+        }
+        return instance;
+    }
+
+
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
