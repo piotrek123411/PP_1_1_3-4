@@ -1099,31 +1099,31 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="299" parent="290" name="cars">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_general_ci</CollationName>
-    </table>
-    <table id="300" parent="290" name="user_hibernate">
+    <table id="299" parent="290" name="users">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb3_general_ci</CollationName>
     </table>
-    <table id="301" parent="290" name="users">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_general_ci</CollationName>
-    </table>
-    <column id="302" parent="299" name="id">
-      <AutoIncrement>64</AutoIncrement>
-      <DataType>int|0s</DataType>
+    <column id="300" parent="299" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="303" parent="299" name="name">
-      <DataType>varchar(255)|0s</DataType>
+    <column id="301" parent="299" name="age">
+      <DataType>tinyint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="304" parent="299" name="series">
+    <column id="302" parent="299" name="last_name">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
+    </column>
+    <column id="303" parent="299" name="middle_name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="304" parent="299" name="name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>5</Position>
     </column>
     <index id="305" parent="299" name="PRIMARY">
       <ColNames>id</ColNames>
@@ -1131,69 +1131,6 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Unique>1</Unique>
     </index>
     <key id="306" parent="299" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="307" parent="300" name="id">
-      <AutoIncrement>17</AutoIncrement>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="308" parent="300" name="age">
-      <DataType>tinyint|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="309" parent="300" name="last_name">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="310" parent="300" name="middle_name">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="311" parent="300" name="name">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <index id="312" parent="300" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="313" parent="300" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="314" parent="301" name="id">
-      <AutoIncrement>1</AutoIncrement>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="315" parent="301" name="name">
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="316" parent="301" name="lastName">
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="317" parent="301" name="age">
-      <DataType>tinyint|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <index id="318" parent="301" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="319" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

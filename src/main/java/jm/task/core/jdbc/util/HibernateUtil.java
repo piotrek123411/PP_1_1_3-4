@@ -28,7 +28,7 @@ public class HibernateUtil {
 
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/mydbtest?useSSL=false&characterEncoding=UTF-8");
+                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/mydbtest?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT&allowPublicKeyRetrieval=true&useSSL=false&zeroDateTimeBehavior=convertToNull");
                 settings.put(Environment.USER, "root");
                 settings.put(Environment.PASS, "root");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
@@ -45,7 +45,6 @@ public class HibernateUtil {
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
-
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);
             } catch (Exception e) {
                 e.printStackTrace();

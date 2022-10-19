@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "user_hibernate")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -19,8 +19,8 @@ public class User {
     @Column
     private Byte age;
 
-    @Column(name = "middle_name")
-    private String middleName;
+//    @Column(name = "middle_name")
+//    private String middleName;
 
     public User() {
 
@@ -64,13 +64,13 @@ public class User {
         this.age = age;
     }
 
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
+//    public String getMiddleName() {
+//        return middleName;
+//    }
+//
+//    public void setMiddleName(String middleName) {
+//        this.middleName = middleName;
+//    }
 
     @Override
     public String toString() {
