@@ -10,7 +10,7 @@ import static jm.task.core.jdbc.util.HibernateUtil.getInstance;
 
 public class UserDaoHibernateImpl implements UserDao {
 
-    public static final SessionFactory sessionFactory = (SessionFactory) getInstance().getSessionFactory();
+    public static final SessionFactory sessionFactory = getInstance().getSessionFactory();
 
 //    public void saveUser(User user) {
 //        try (Session session = sessionFactory.openSession()) {
