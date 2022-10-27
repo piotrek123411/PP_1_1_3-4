@@ -22,7 +22,6 @@ public class UserDaoHibernateImpl implements UserDao {
                     "name VARCHAR(50) NOT NULL, lastName VARCHAR(50) NOT NULL, " +
                     "age TINYINT NOT NULL)").addEntity(User.class);
             transaction.commit();
-            session.close();
         } catch (Exception e) {
             if ( transaction == null) {
                 transaction.rollback();
@@ -38,7 +37,6 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction = session.beginTransaction();
             session.createSQLQuery("DROP TABLE IF EXISTS users").addEntity(User.class);
             transaction.commit();
-            session.close();
         }  catch (Exception e) {
             if ( transaction == null) {
                 transaction.rollback();
@@ -58,7 +56,6 @@ public class UserDaoHibernateImpl implements UserDao {
             user.setAge(age);
             session.save(user);
             transaction.commit();
-            session.close();
         } catch (Exception e) {
             if (transaction == null) {
                 transaction.rollback();
@@ -75,7 +72,6 @@ public class UserDaoHibernateImpl implements UserDao {
             User user = session.load(User.class, id);
             session.delete(user);
             transaction.commit();
-            session.close();
             System.out.println("Deleted: " + user.getId() + " user");
         }  catch (Exception e) {
             if ( transaction == null) {
@@ -102,7 +98,6 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction = session.beginTransaction();
             session.createSQLQuery("TRUNCATE TABLE users ");
             transaction.commit();
-            session.close();
         } catch (Exception e) {
             if ( transaction == null) {
                 transaction.rollback();
